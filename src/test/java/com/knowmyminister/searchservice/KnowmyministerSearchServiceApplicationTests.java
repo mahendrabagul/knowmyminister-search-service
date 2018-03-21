@@ -1,4 +1,4 @@
-package com.knowmyminister.searchservice.knowmyministersearchservice;
+package com.knowmyminister.searchservice;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

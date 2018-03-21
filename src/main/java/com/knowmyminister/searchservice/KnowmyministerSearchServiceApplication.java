@@ -1,4 +1,4 @@
-package com.knowmyminister.searchservice.knowmyministersearchservice;
+package com.knowmyminister.searchservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

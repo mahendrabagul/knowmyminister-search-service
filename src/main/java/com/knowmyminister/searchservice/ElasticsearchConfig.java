@@ -1,4 +1,4 @@
-package com.knowmyminister.searchservice.knowmyministersearchservice;
+package com.knowmyminister.searchservice;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;

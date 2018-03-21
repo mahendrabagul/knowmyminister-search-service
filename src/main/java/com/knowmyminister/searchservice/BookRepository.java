@@ -1,4 +1,4 @@
-package com.knowmyminister.searchservice.knowmyministersearchservice;
+package com.knowmyminister.searchservice;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
