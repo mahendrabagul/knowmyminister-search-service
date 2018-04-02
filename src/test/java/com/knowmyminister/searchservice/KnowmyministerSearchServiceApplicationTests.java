@@ -7,10 +7,12 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class KnowmyministerSearchServiceApplicationTests {
+public class KnowmyministerSearchServiceApplicationTests
+{
 
-	@Test
-	public void contextLoads() {
-	}
+    @Test
+    public void contextLoads()
+    {
+    }
 
 }

@@ -6,7 +6,9 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 @EnableElasticsearchRepositories(basePackages = "com.knowmyminister.searchservice")
 
-@SpringBootApplication public class KnowmyministerSearchServiceApplication {
+@SpringBootApplication
+public class KnowmyministerSearchServiceApplication
+{
 
     public static void main(String[] args)
     {

@@ -1,21 +1,26 @@
-package com.knowmyminister.searchservice;
+package com.knowmyminister.searchservice.domain;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
-@Document(indexName = "mkyong", type = "books") public class Book {
+@Document(indexName = "knowmyminister", type = "books")
+public class Book
+{
 
     @Id
     private String id;
     private String title;
-    private String author;
+    @Field(type = FieldType.Nested)
+    private Author author;
     private String releaseDate;
 
     public Book()
     {
     }
 
-    public Book(String id, String title, String author, String releaseDate)
+    public Book(String id, String title, Author author, String releaseDate)
     {
         this.id = id;
         this.title = title;
@@ -43,12 +48,12 @@ import org.springframework.data.elasticsearch.annotations.Document;
         this.title = title;
     }
 
-    public String getAuthor()
+    public Author getAuthor()
     {
         return author;
     }
 
-    public void setAuthor(String author)
+    public void setAuthor(Author author)
     {
         this.author = author;
     }
@@ -63,7 +68,8 @@ import org.springframework.data.elasticsearch.annotations.Document;
         this.releaseDate = releaseDate;
     }
 
-    @Override public String toString()
+    @Override
+    public String toString()
     {
         return "Book{" + "id='" + id + '\'' + ", title='" + title + '\'' + ", author='" + author + '\'' + ", releaseDate='" + releaseDate + '\'' + '}';
     }

@@ -1,17 +1,20 @@
-package com.knowmyminister.searchservice;
+package com.knowmyminister.searchservice.service;
 
+import com.knowmyminister.searchservice.domain.Book;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface BookService {
+public interface BookService
+{
 
     Book save(Book book);
 
     void delete(Book book);
 
-    java.util.Optional<Book> findOne(String id);
+    Optional<Book> findOne(String id);
 
     Iterable<Book> findAll();
 

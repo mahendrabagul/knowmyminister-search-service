@@ -1,17 +1,24 @@
-package com.knowmyminister.searchservice;
+package com.knowmyminister.searchservice.service.impl;
 
+import com.knowmyminister.searchservice.domain.Book;
+import com.knowmyminister.searchservice.repository.BookRepository;
+import com.knowmyminister.searchservice.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
-@Service public class BookServiceImpl implements BookService {
+@Service
+public class BookServiceImpl implements BookService
+{
 
     private BookRepository bookRepository;
 
-    @Autowired public void setBookRepository(BookRepository bookRepository)
+    @Autowired
+    public void setBookRepository(BookRepository bookRepository)
     {
         this.bookRepository = bookRepository;
     }
@@ -27,7 +34,7 @@ import java.util.List;
         bookRepository.delete(book);
     }
 
-    public java.util.Optional<Book> findOne(String id)
+    public Optional<Book> findOne(String id)
     {
         return bookRepository.findById(id);
     }

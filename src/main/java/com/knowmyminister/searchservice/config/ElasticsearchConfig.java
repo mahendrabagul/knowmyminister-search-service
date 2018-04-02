@@ -1,4 +1,4 @@
-package com.knowmyminister.searchservice;
+package com.knowmyminister.searchservice.config;
 
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.settings.Settings;
@@ -10,11 +10,14 @@ import org.springframework.context.annotation.Configuration;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
-@Configuration public class ElasticsearchConfig {
+@Configuration
+public class ElasticsearchConfig
+{
 
     private TransportClient client;
 
-    @Bean public TransportClient client() throws UnknownHostException
+    @Bean
+    public TransportClient client() throws UnknownHostException
     {
 
         Settings settings = Settings.builder()
